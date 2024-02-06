@@ -1,9 +1,5 @@
-#!/bin/bash
-set -e
+#!/bin/sh -l
 
-if echo "$*" | grep -i -q LGTM;
-then
-    echo "Found keyword"
-else
-    echo "Nothing to process"
-fi
+echo "Hello $1"
+time=$(date)
+echo "time=$time" >> $GITHUB_OUTPUT
